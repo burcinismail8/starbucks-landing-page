@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+
+        <header>
+            <a href="#"><img src="images/logo.png" class="logo" alt="logo"></a>
+            <div class="toggle" onclick="menuToggle()">
+
+            </div>
+
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Menu</a></li>
+                <li><a href="index.html">What's new</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </ul>
+
+
+        </header>
+        <main class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee <br>It's <span>Starbucks</span></h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatem voluptatum cum odio ea
+                    rerum recusandae nobis nam quis! Animi neque vitae pariatur? Est ullam nesciunt corporis ipsa
+                    blanditiis tempore?</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imageBox">
+                <img src="images/img1.png" class="starbucks">
+            </div>
+        </main>
+        <ul class="thumb">
+            <li><img src="images/thumb1.png" onclick="imgSlider('img1.png');changeCircleColor( '#017143')"></li>
+            <li><img src="images/thumb2.png" onclick="imgSlider('img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src=" images/thumb3.png" onclick="imgSlider('img3.png'); changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class=" sci">
+            <li><a href="https://www.facebook.com/Starbucks/"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://twitter.com/starbucks?lang=bg"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/starbucksbulgaria/"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </section>
+
+    <script>
+        function imgSlider(anything) {
+            document.querySelector(".starbucks").src = "images/" + anything;
+        }
+
+        function changeCircleColor(color) {
+            const circle = document.querySelector(".circle");
+            circle.style.background = color
+        }
+
+        function menuToggle() {
+            const menu = document.querySelector(".toggle");
+            const nav = document.querySelector(".nav");
+            menu.classList.toggle("active")
+            nav.classList.toggle("active")
+        }
+    </script>
+</body>
+
+</html>

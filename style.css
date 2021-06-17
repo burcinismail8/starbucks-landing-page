@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "https://use.fontawesome.com/releases/v5.15.3/css/all.css";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+}
+
+header .logo {
+  position: relative;
+  max-width: 80px;
+}
+header ul {
+  display: flex;
+  position: relative;
+  list-style: none;
+}
+
+header ul li a {
+  display: inline-block;
+  font-weight: 400;
+  text-decoration: none;
+  color: #333333;
+  margin-left: 40px;
+  font-size: 1.1rem;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .textBox {
+  position: relative;
+  max-width: 600px;
+}
+.content .textBox h2 {
+  color: #333333;
+  font-weight: 500;
+  font-size: 4em;
+  line-height: 1.4em;
+}
+
+.content .textBox h2 span {
+  color: #017143;
+  font-weight: 800;
+  font-size: 1.2em;
+}
+.content .textBox p {
+  color: #333333;
+  margin: 10px 0;
+  letter-spacing: 0.4px;
+}
+.content .textBox a {
+  background-color: #017143;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  border-radius: 40px;
+  font-weight: 500;
+}
+.content .imageBox {
+  display: flex;
+  width: 600px;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+
+.content .imageBox img {
+  max-width: 320px;
+}
+
+.thumb {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+}
+.thumb li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.thumb li:hover {
+  transform: translateY(-15px);
+}
+.thumb li img {
+  max-width: 60px;
+}
+
+.sci {
+  display: block;
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li {
+  margin: 15px 0;
+}
+.sci li a {
+  text-decoration: none;
+  transform: scale(0.6);
+}
+.sci li a i {
+  color: white;
+  font-size: 1.8rem;
+}
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #017143;
+  clip-path: circle(600px at right 800px);
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 20px;
+  }
+  header .logo {
+    position: relative;
+    max-width: 60px;
+  }
+  header ul {
+    display: none;
+  }
+  header .nav.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    z-index: 10;
+  }
+  header ul li a {
+    font-size: 1.8rem;
+    margin: 10px;
+  }
+  section {
+    padding: 20px 20px 120px;
+  }
+  .content {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url(images/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    filter: invert(1);
+    position: absolute;
+    right: 55px;
+    z-index: 11;
+  }
+  .toggle.active {
+    background-image: url(images/close.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+  }
+  .content .textBox {
+    max-width: 100%;
+  }
+  .content .textBox h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  .content .imageBox {
+    max-width: 100%;
+    justify-content: center;
+  }
+  .content .imageBox img {
+    max-width: 270px;
+    margin-bottom: 60px;
+  }
+  .thumb li img {
+    max-width: 50px;
+  }
+  .circle {
+    clip-path: circle(400px at center bottom);
+  }
+  .sci {
+    background-color: #017143;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 15px;
+    right: 0;
+  }
+}
